@@ -1,0 +1,21 @@
+.container {
+  background-color: var(--onyx);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  color: var(--white);
+}
+
+.listContainer {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 0.5rem;
+  padding: 10px;
+}

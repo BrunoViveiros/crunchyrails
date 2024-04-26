@@ -1,0 +1,17 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 315px;
+  width: 185px;
+  gap: 0.5rem;
+}
+
+.image {
+  border-radius: 4px;
+}
+
+.title {
+  text-decoration: none;
+  color: var(--onyx);
+  font-size: 1.25rem;
+}

@@ -1,3 +1,5 @@
+import { Navbar } from "@/components/molecules/Navbar/Navbar";
+
 export default function Home() {
-  return <h1>Crunchyrails</h1>;
+  return <Navbar />;
 }
