@@ -9,8 +9,8 @@ const Card = () => {
         <Image
           alt="oshi no ko image"
           src="/animes/oshi_no_ko.png"
-          width={185}
-          height={265}
+          fill
+          objectFit="cover"
           className={styles.image}
         />
       </Link>
