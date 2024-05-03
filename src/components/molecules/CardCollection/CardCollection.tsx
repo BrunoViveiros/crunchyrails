@@ -6,7 +6,7 @@ const CardCollection = () => {
 
   return (
     <>
-      <span className={styles.title}>Last Season</span>
+      <h3 className={styles.title}>Last Season</h3>
 
       <div className={styles.cardContainer}>
         {mockArray.map((numb) => {

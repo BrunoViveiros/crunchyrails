@@ -17,5 +17,15 @@
 .title {
   text-decoration: none;
   color: var(--onyx);
-  font-size: 1.125rem;
+}
+
+@media (min-width: 768px) {
+  .imageContainer {
+    width: 185px;
+    height: 265px;
+  }
+
+  .title {
+    font-size: 1.125rem;
+  }
 }
