@@ -1,0 +1,49 @@
+.navbar {
+  display: flex;
+  background-color: var(--onyx);
+  justify-content: space-around;
+  color: var(--white);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.listContainer {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+}
+
+.listLink {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 0.5rem;
+  padding: 10px;
+}
+
+.loginButton {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: var(--coral);
+  padding: 0.5rem 1rem;
+  background-color: var(--onyx);
+  border: none;
+}
+
+.signUpButton {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: var(--white);
+  padding: 0.5rem 1rem;
+  background-color: var(--earth-yellow);
+  border: none;
+  border-radius: 5px;
+}

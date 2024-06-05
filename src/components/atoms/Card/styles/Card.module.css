@@ -1,0 +1,31 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.imageContainer {
+  width: 110px;
+  height: 160px;
+  position: relative;
+}
+
+.image {
+  border-radius: 4px;
+}
+
+.title {
+  text-decoration: none;
+  color: var(--onyx);
+}
+
+@media (min-width: 768px) {
+  .imageContainer {
+    width: 185px;
+    height: 265px;
+  }
+
+  .title {
+    font-size: 1.125rem;
+  }
+}
