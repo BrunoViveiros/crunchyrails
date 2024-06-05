@@ -23,7 +23,9 @@
     "eslint": "^8",
     "eslint-config-next": "14.2.1",
     "jsdom": "^24.0.0",
-    "typescript": "^5",
-    "vitest": "^1.5.0"
+    "vitest": "^1.5.0",
+    "eslint-config-prettier": "^9.1.0",
+    "prettier": "^3.2.5",
+    "typescript": "^5"
   }
 }
