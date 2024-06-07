@@ -1,18 +1,20 @@
-import { Container } from "@/components/atoms/Container/Container";
-import { CardCollection } from "@/components/molecules/CardCollection/CardCollection";
-import HeroBanner from "@/components/molecules/HeroBanner/HeroBanner";
-import { Navbar } from "@/components/molecules/Navbar/Navbar";
+import {
+  dehydrate,
+  HydrationBoundary,
+  QueryClient,
+} from '@tanstack/react-query';
 
-export default function Home() {
+import { prefetchTopAnimes } from '@/hooks/useTopAnimes';
+import Homepage from './homepage';
+
+export default async function Home() {
+  const queryClient = new QueryClient();
+
+  await prefetchTopAnimes(queryClient);
+
   return (
-    <>
-      <Navbar />
-
-      <HeroBanner />
-
-      <Container>
-        <CardCollection />
-      </Container>
-    </>
+    <HydrationBoundary state={dehydrate(queryClient)}>
+      <Homepage />
+    </HydrationBoundary>
   );
 }
