@@ -1,3 +1,9 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .title {
   font-size: 1.5rem;
   font-weight: bold;
@@ -7,11 +13,15 @@
 .cardContainer {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 0.5rem;
+  gap: 1rem;
   row-gap: 2rem;
 }
 
 @media (min-width: 768px) {
+  .container {
+    align-items: flex-start;
+  }
+
   .cardContainer {
     grid-template-columns: repeat(4, 1fr);
   }

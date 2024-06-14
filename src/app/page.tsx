@@ -5,7 +5,7 @@ import {
 } from '@tanstack/react-query';
 
 import { prefetchTopAnimes } from '@/hooks/useTopAnimes';
-import Homepage from './homepage';
+import Homepage from '../components/templates/homepage';
 
 export default async function Home() {
   const queryClient = new QueryClient();

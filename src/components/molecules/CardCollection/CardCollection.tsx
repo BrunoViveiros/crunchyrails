@@ -1,19 +1,23 @@
-import styles from "./styles/CardCollection.module.css";
-import { Card } from "@/components/atoms/Card/Card";
+import { Anime } from '@/domain/Anime';
+import styles from './styles/CardCollection.module.css';
+import { Card } from '@/components/atoms/Card/Card';
 
-const CardCollection = () => {
-  const mockArray = [1, 2, 3, 4, 5, 6];
+type CardCollectionProps = {
+  title: string;
+  cards: Anime[];
+};
 
+const CardCollection = ({ title, cards }: CardCollectionProps) => {
   return (
-    <>
-      <h3 className={styles.title}>Last Season</h3>
+    <div className={styles.container}>
+      <h3 className={styles.title}>{title}</h3>
 
       <div className={styles.cardContainer}>
-        {mockArray.map((numb) => {
-          return <Card key={numb} />;
-        })}
+        {cards.map(({ id, name, image }) => (
+          <Card key={id} imageSrc={image} title={name} alt={name} />
+        ))}
       </div>
-    </>
+    </div>
   );
 };
 

@@ -7,7 +7,7 @@ import { Navbar } from '@/components/molecules/Navbar/Navbar';
 import { useTopAnimes } from '@/hooks/useTopAnimes';
 
 export default function Homepage() {
-  const { data } = useTopAnimes();
+  const { data: topAnimeData } = useTopAnimes();
 
   return (
     <>
@@ -16,9 +16,8 @@ export default function Homepage() {
       <HeroBanner />
 
       <Container>
-        <CardCollection />
+        <CardCollection title="Top Animes" cards={topAnimeData} />
       </Container>
-      {data?.map((anime) => <p key={anime.id}>{anime.name}</p>)}
     </>
   );
 }

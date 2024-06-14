@@ -1,22 +1,22 @@
-import { Image } from "@/lib/Components/Image/Image";
-import { Link } from "@/lib/Components/Link/Link";
-import styles from "./styles/Card.module.css";
+import { Image } from '@/lib/Components/Image/Image';
+import { Link } from '@/lib/Components/Link/Link';
+import styles from './styles/Card.module.css';
 
-const Card = () => {
+export type CardProps = {
+  title: string;
+  imageSrc: string;
+  alt: string;
+};
+
+const Card = ({ title, imageSrc, alt }: CardProps) => {
   return (
     <div className={styles.container}>
       <Link href="/" className={styles.imageContainer}>
-        <Image
-          alt="oshi no ko image"
-          src="/animes/oshi_no_ko.png"
-          fill
-          objectFit="cover"
-          className={styles.image}
-        />
+        <Image alt={alt} src={imageSrc} fill className={styles.image} />
       </Link>
 
       <Link href="/" className={styles.title}>
-        Oshi no Ko
+        {title}
       </Link>
     </div>
   );
