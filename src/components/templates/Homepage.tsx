@@ -3,22 +3,26 @@
 import { Container } from '@/components/atoms/Container/Container';
 import { CardCollection } from '@/components/molecules/CardCollection/CardCollection';
 import HeroBanner from '@/components/molecules/HeroBanner/HeroBanner';
-import { Navbar } from '@/components/molecules/Navbar/Navbar';
 import { useTopAnimes } from '@/hooks/useTopAnimes';
 
 export default function Homepage() {
-  const { data } = useTopAnimes();
+  const { data: topAnimeData, status } = useTopAnimes();
+
+  const requestSuccess = status === 'success';
+  const requestFailed = status === 'error';
+  const loading = status === 'pending';
 
   return (
     <>
-      <Navbar />
-
       <HeroBanner />
 
       <Container>
-        <CardCollection />
+        {loading && <p>Loading...</p>}
+        {requestSuccess && (
+          <CardCollection title="Top Animes" cards={topAnimeData} />
+        )}
+        {requestFailed && <p>Error</p>}
       </Container>
-      {data?.map((anime) => <p key={anime.id}>{anime.name}</p>)}
     </>
   );
 }
